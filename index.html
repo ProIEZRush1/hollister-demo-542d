@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hollister · Seguridad privada intramuros</title>
+<meta name="description" content="Seguridad privada intramuros para residencias, corporativos y hospitalidad. Cotización personalizada por WhatsApp.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --negro:#0a0a0a; --negro-2:#141414; --negro-3:#1d1d1d; --oro:#c9a14a; --oro-h:#b48c36; --oro-c:#f4ead2;
+    --fondo:#f6f4ef; --blanco:#fff; --tinta:#161616; --tinta-2:#5f5b53; --linea:#e4dfd4; --wa:#1fa855; --wa-h:#178a45;
+    --sombra:0 1px 2px rgba(0,0,0,.05),0 14px 34px -16px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--fondo);color:var(--tinta);-webkit-font-smoothing:antialiased;line-height:1.55;overflow-x:hidden}
+  a{color:inherit}
+  h1,h2,h3,.logo,.num{font-family:Archivo,Inter,sans-serif;letter-spacing:-.01em}
+  section{scroll-margin-top:66px;padding:78px 0}
+  .cont{max-width:1160px;margin:0 auto;padding:0 20px}
+  svg.i{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .aviso-demo{background:#000;color:#bdb6a6;font-size:13px;text-align:center;padding:8px 16px;border-bottom:1px solid #222}
+  .aviso-demo a{color:var(--oro);font-weight:600;text-decoration:none}
+  header{position:sticky;top:0;z-index:20;background:rgba(10,10,10,.95);backdrop-filter:blur(10px);color:#fff;border-bottom:1px solid #222}
+  .barra{display:flex;align-items:center;gap:24px;height:70px}
+  .logo{display:flex;align-items:center;gap:11px;text-decoration:none;font-size:23px;font-weight:900;line-height:1;letter-spacing:.04em}
+  .logo img{width:42px;height:42px;border-radius:50%}
+  .logo small{display:block;font:600 10.5px/1.2 Inter,sans-serif;letter-spacing:.16em;color:var(--oro);margin-top:3px}
+  nav.menu{display:flex;gap:26px;margin-left:auto;font-size:15px;font-weight:500}
+  nav.menu a{text-decoration:none;color:#cfc8b8} nav.menu a:hover{color:var(--oro)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;cursor:pointer;font:600 15px/1 Inter,sans-serif;text-decoration:none;border-radius:12px;padding:14px 22px;transition:.15s}
+  .btn-wa{background:var(--wa);color:#fff} .btn-wa:hover{background:var(--wa-h)}
+  .btn-oro{background:var(--oro);color:#0a0a0a} .btn-oro:hover{background:var(--oro-h)}
+  .btn-linea{color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4)}
+  .barra .btn{padding:11px 16px;font-size:14px}
+  .hero{position:relative;background:radial-gradient(120% 90% at 85% 10%,#2a2416 0,var(--negro) 55%);color:#fff;overflow:hidden}
+  .h-grid{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:34px;align-items:center;padding-top:72px;padding-bottom:80px}
+  .chip{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(201,161,74,.55);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600;color:var(--oro);letter-spacing:.04em}
+  .hero h1{font-size:clamp(46px,7.4vw,92px);line-height:.95;font-weight:900;margin:20px 0 10px;letter-spacing:.01em}
+  .hero h2{font:600 clamp(22px,2.6vw,30px)/1.2 Inter,sans-serif;color:#fff;margin-bottom:10px}
+  .giros{font-size:15px;letter-spacing:.12em;color:#a59f91;margin-bottom:16px}
+  .hero p.sub{font-size:17px;color:#cfc8b8;max-width:540px}
+  .hero p.sub b{color:var(--oro);font-weight:600}
+  .acciones{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+  .sello{justify-self:center;width:min(300px,70vw);aspect-ratio:1;border-radius:50%;padding:10px;background:conic-gradient(from 0deg,#c9a14a,#6b5524,#e7cf8f,#6b5524,#c9a14a);box-shadow:0 30px 80px -20px rgba(201,161,74,.45)}
+  .sello img{width:100%;height:100%;border-radius:50%;display:block;background:#fff}
+  .eti{font-size:13px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--oro-h)}
+  .titulo{max-width:680px;margin-bottom:34px}
+  .titulo h2{font-size:clamp(30px,3.8vw,44px);line-height:1.08;margin:10px 0 12px;font-weight:800;color:var(--negro)}
+  .titulo p{color:var(--tinta-2);font-size:17px}
+  .servicios{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .s{background:var(--blanco);border:1px solid var(--linea);border-radius:18px;padding:24px;box-shadow:var(--sombra);display:flex;flex-direction:column;gap:10px}
+  .s .ico{width:54px;height:54px;border-radius:50%;border:1.5px solid var(--oro);color:var(--oro-h);display:grid;place-items:center}
+  .s .ico svg{width:26px;height:26px}
+  .s h3{font-size:20px;font-weight:800;color:var(--negro);line-height:1.15} .s p{color:var(--tinta-2);font-size:15px}
+  .s a{margin-top:auto;font-weight:600;color:var(--negro);text-decoration:none;display:inline-flex;gap:6px;align-items:center;font-size:14px}
+  .exp{background:var(--negro);color:#fff}
+  .exp .titulo h2{color:#fff} .exp .titulo .eti{color:var(--oro)} .exp .titulo p{color:#cfc8b8}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #2a2a2a;border-bottom:1px solid #2a2a2a}
+  .st{padding:30px 18px;text-align:center;border-right:1px solid #2a2a2a}
+  .st:last-child{border-right:0}
+  .num{font-size:clamp(44px,5vw,64px);font-weight:900;color:var(--oro);line-height:1}
+  .st span{display:block;margin-top:10px;color:#cfc8b8;font-size:15px}
+  .porque{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+  .pq{display:flex;gap:14px;align-items:center;font-weight:600;font-size:17px}
+  .pq .c{width:46px;height:46px;flex:none;border-radius:50%;border:1.5px solid var(--oro);color:var(--oro);display:grid;place-items:center}
+  .cotiza .r-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:start}
+  .lista-a{list-style:none;display:grid;gap:16px}
+  .lista-a li{display:flex;gap:14px}
+  .lista-a .n{width:36px;height:36px;flex:none;border-radius:50%;background:var(--negro);color:var(--oro);display:grid;place-items:center;font:800 15px Archivo,sans-serif}
+  .lista-a b{display:block;font-size:16px} .lista-a span{color:var(--tinta-2);font-size:15px}
+  .form{background:var(--negro);color:#fff;border-radius:22px;padding:22px;box-shadow:var(--sombra)}
+  .form h3{font-size:25px;font-weight:800;line-height:1.1}
+  .nota2{font-size:13px;color:#a59f91;margin:4px 0 16px}
+  .sub-l{font-size:13px;font-weight:600;color:#cfc8b8;margin-bottom:7px}
+  .opc{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+  .opc button{all:unset;cursor:pointer;background:var(--negro-3);border:1.5px solid #333;border-radius:11px;padding:11px 12px;font-size:14px;font-weight:600;text-align:center;color:#e8e2d4}
+  .opc button[aria-pressed="true"]{border-color:var(--oro);background:var(--oro);color:#0a0a0a}
+  .tres{grid-template-columns:repeat(3,1fr)}
+  .campos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+  .campos label{font-size:13px;font-weight:600;color:#cfc8b8;display:grid;gap:6px}
+  input{font:15px Inter,sans-serif;padding:11px 12px;border-radius:11px;border:1.5px solid #333;background:var(--negro-3);color:#fff;width:100%;min-width:0}
+  input::placeholder{color:#777}
+  input:focus{outline:0;border-color:var(--oro)}
+  .resumen{background:var(--negro-2);border:1px solid #2a2a2a;color:#cfc8b8;border-radius:12px;padding:11px 14px;margin-bottom:12px;font-size:14px}
+  .resumen b{color:var(--oro)}
+  .form .btn{width:100%} .form .btn[aria-disabled="true"]{opacity:.4;pointer-events:none}
+  .aclara{font-size:12.5px;color:#8f897c;margin-top:8px;text-align:center}
+  .cta{background:radial-gradient(120% 120% at 90% 0,#2a2416 0,var(--negro) 60%);color:#fff;border-radius:24px;padding:54px 40px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+  .cta h2{font-size:clamp(40px,5.4vw,68px);line-height:1;font-weight:900}
+  .cta p{color:var(--oro);font-size:18px;margin-top:10px}
+  .contacto{border-left:1px solid #333;padding-left:30px;display:grid;gap:12px}
+  .contacto b{font:800 24px Archivo,sans-serif}
+  .contacto a{display:inline-flex;gap:10px;align-items:center;text-decoration:none;color:#e8e2d4;font-size:16px}
+  .contacto svg{color:var(--oro)}
+  footer{padding:40px 0 110px;color:var(--tinta-2);font-size:14px}
+  .pie{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center;border-top:1px solid var(--linea);padding-top:26px}
+  .pie .logo{font-size:19px;color:var(--negro)} .pie .logo img{width:34px;height:34px}
+  .pie a{text-decoration:none;font-weight:600;color:var(--negro)}
+  .flota{position:fixed;right:20px;bottom:20px;z-index:30;border-radius:999px;box-shadow:0 10px 26px -8px rgba(31,168,85,.6)}
+  @media (max-width:920px){
+    nav.menu{display:none} .barra .btn{margin-left:auto}
+    .h-grid,.cotiza .r-grid,.cta{grid-template-columns:1fr} .servicios,.stats{grid-template-columns:1fr 1fr}
+    .st:nth-child(2){border-right:0} .st:nth-child(-n+2){border-bottom:1px solid #2a2a2a}
+    .porque{grid-template-columns:1fr} .sello{width:220px}
+    .contacto{border-left:0;padding-left:0;border-top:1px solid #333;padding-top:22px}
+  }
+  @media (max-width:620px){
+    .cont{padding:0 16px} .barra{height:62px;gap:12px} .logo{font-size:19px} .logo img{width:36px;height:36px} .logo small{display:none}
+    .barra .btn span{display:none}
+    .h-grid{padding-top:44px;padding-bottom:56px} .hero p.sub{font-size:16px} .acciones .btn{flex:1 1 100%}
+    .sello{width:180px;order:-1;justify-self:start}
+    section{padding:56px 0} .servicios{grid-template-columns:1fr}
+    .cta{padding:40px 22px} .flota span{display:none} .flota{padding:15px}
+  }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12.04 2C6.58 2 2.130 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.210 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.08c-.24.68-1.42 1.31-1.95 1.36-.5.05-.97.24-3.26-.68-2.76-1.090-4.5-3.92-4.64-4.1-.13-.18-1.11-1.48-1.11-2.82s.7-2 .95-2.27c.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.23.54.77 1.88.84 2.02.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.88.27.14.45.2.52.32.07.11.07.66-.17 1.33Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></symbol>
+  <symbol id="i-gafete" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M9 3h6v4H9z"/><circle cx="8.5" cy="12.5" r="2"/><path d="M5.5 17.5c.6-1.6 1.7-2.4 3-2.4s2.4.8 3 2.4M14 11h4M14 14h4"/></symbol>
+  <symbol id="i-guardia" viewBox="0 0 24 24"><path d="M6 8c0-1.5 2.7-3 6-3s6 1.5 6 3H6Z"/><path d="M8 8v1a4 4 0 0 0 8 0V8"/><path d="M5 21v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1"/><path d="m12 15 1.2 2-1.2 3-1.2-3Z"/></symbol>
+  <symbol id="i-alarma" viewBox="0 0 24 24"><path d="M7 18v-5a5 5 0 0 1 10 0v5"/><path d="M5 21h14v-3H5zM12 3v2M4.2 6.2l1.4 1.4M19.8 6.2l-1.4 1.4M2 12h2M20 12h2"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+</svg>
+
+<div class="aviso-demo">Demostración preparada para Hollister por <a href="https://overcloud.us" target="_blank" rel="noopener">Overcloud</a>. Los textos son de su anuncio.</div>
+
+<header>
+  <div class="cont barra">
+    <a class="logo" href="#inicio" aria-label="Hollister, inicio"><img src="logo.png" alt=""><span>HOLLISTER<small>SEGURIDAD PRIVADA</small></span></a>
+    <nav class="menu" aria-label="Secciones">
+      <a href="#servicios">Servicios</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#cotiza">Cotización</a>
+    </nav>
+    <a class="btn btn-wa" href="https://wa.me/525568084856?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20seguridad%20para%20un%20inmueble" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="hero">
+    <div class="cont h-grid">
+      <div>
+        <span class="chip"><svg class="i" style="width:16px;height:16px"><use href="#i-escudo"/></svg> Seguridad y custodia profesional</span>
+        <h1>HOLLISTER</h1>
+        <h2>Seguridad privada intramuros</h2>
+        <div class="giros">RESIDENCIAL · CORPORATIVO · HOSPITALIDAD</div>
+        <p class="sub">Empresa mexicana especializada en <b>protección intramuros</b> para residencias, corporativos, plantas y espacios de hospitalidad.</p>
+        <div class="acciones">
+          <a class="btn btn-oro" href="#cotiza">Pedir cotización <svg class="i"><use href="#i-flecha"/></svg></a>
+          <a class="btn btn-linea" href="#servicios">Ver servicios</a>
+        </div>
+      </div>
+      <div class="sello"><img src="logo.png" alt="Hollister In Secupro, seguridad y custodia profesional"></div>
+    </div>
+  </div>
+
+  <section id="servicios">
+    <div class="cont">
+      <div class="titulo"><div class="eti">Qué hacemos</div><h2>Protección completa dentro de su inmueble</h2><p>Personal y protocolos para que su residencia, oficina o planta esté cuidada todo el día.</p></div>
+      <div class="servicios">
+        <article class="s"><div class="ico"><svg class="i"><use href="#i-escudo"/></svg></div><h3>Seguridad intramuros</h3><p>Elementos dentro de su inmueble, en el turno que necesite.</p><a href="#cotiza" data-sv="Seguridad intramuros">Cotizar <svg class="i" style="width:16px;height:16px"><use href="#i-flecha"/></svg></a></article>
+        <article class="s"><div class="ico"><svg class="i"><use href="#i-gafete"/></svg></div><h3>Control de accesos</h3><p>Registro de visitas, proveedores y personal en cada entrada.</p><a href="#cotiza" data-sv="Control de accesos">Cotizar <svg class="i" style="width:16px;height:16px"><use href="#i-flecha"/></svg></a></article>
+        <article class="s"><div class="ico"><svg class="i"><use href="#i-guardia"/></svg></div><h3>Supervisión y rondines</h3><p>Recorridos programados y supervisión del servicio.</p><a href="#cotiza" data-sv="Supervisión y rondines">Cotizar <svg class="i" style="width:16px;height:16px"><use href="#i-flecha"/></svg></a></article>
+        <article class="s"><div class="ico"><svg class="i"><use href="#i-alarma"/></svg></div><h3>Protocolos de emergencia</h3><p>Personal preparado para actuar rápido ante cualquier incidente.</p><a href="#cotiza" data-sv="Protocolos de emergencia">Cotizar <svg class="i" style="width:16px;height:16px"><use href="#i-flecha"/></svg></a></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experiencia" class="exp">
+    <div class="cont">
+      <div class="titulo"><div class="eti">Experiencia</div><h2>Más de 20 años cuidando inmuebles</h2></div>
+      <div class="stats">
+        <div class="st"><div class="num">+20</div><span>años de experiencia</span></div>
+        <div class="st"><div class="num">100%</div><span>personal evaluado y documentado</span></div>
+        <div class="st"><div class="num">24/7</div><span>supervisión operativa</span></div>
+        <div class="st"><div class="num">38</div><span>sedes protegidas en México</span></div>
+      </div>
+      <div class="eti" style="margin-top:46px;color:var(--oro)">Por qué Hollister</div>
+      <div class="porque">
+        <div class="pq"><span class="c"><svg class="i"><use href="#i-check"/></svg></span>Respuesta inmediata</div>
+        <div class="pq"><span class="c"><svg class="i"><use href="#i-check"/></svg></span>Personal capacitado</div>
+        <div class="pq"><span class="c"><svg class="i"><use href="#i-check"/></svg></span>Supervisión constante</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cotiza" class="cotiza">
+    <div class="cont r-grid">
+      <div>
+        <div class="titulo"><div class="eti">Cotización</div><h2>Cotización personalizada según su inmueble</h2><p>Llene estos datos y nos llegan a WhatsApp ya escritos. Le contestamos con la propuesta.</p></div>
+        <ul class="lista-a">
+          <li><div class="n">1</div><div><b>Tipo de inmueble</b><span>Residencial, corporativo, hospitalidad o planta.</span></div></li>
+          <li><div class="n">2</div><div><b>Servicio y horario</b><span>Lo que necesita y en qué turno.</span></div></li>
+          <li><div class="n">3</div><div><b>Mándelo por WhatsApp</b><span>Ya va escrito, sin errores.</span></div></li>
+        </ul>
+      </div>
+      <form class="form" id="pedido" onsubmit="return false">
+        <h3>Pida su cotización</h3>
+        <p class="nota2">Sin compromiso. No se cobra nada en la página.</p>
+        <div class="sub-l">Tipo de inmueble</div>
+        <div class="opc" id="inmueble">
+          <button type="button" data-v="Residencial">Residencial</button>
+          <button type="button" data-v="Corporativo">Corporativo</button>
+          <button type="button" data-v="Hospitalidad">Hospitalidad</button>
+          <button type="button" data-v="Planta o bodega">Planta o bodega</button>
+        </div>
+        <div class="sub-l">Servicio</div>
+        <div class="opc" id="servicio">
+          <button type="button" data-v="Seguridad intramuros">Seguridad intramuros</button>
+          <button type="button" data-v="Control de accesos">Control de accesos</button>
+          <button type="button" data-v="Supervisión y rondines">Supervisión y rondines</button>
+          <button type="button" data-v="Protocolos de emergencia">Protocolos de emergencia</button>
+        </div>
+        <div class="sub-l">Horario</div>
+        <div class="opc tres" id="turno">
+          <button type="button" data-v="24 horas">24 horas</button>
+          <button type="button" data-v="Día">Día</button>
+          <button type="button" data-v="Noche">Noche</button>
+        </div>
+        <div class="campos">
+          <label>Zona o colonia<input id="zona" placeholder="Ej. Polanco" autocomplete="off"></label>
+          <label>Elementos aprox.<input id="elementos" placeholder="Ej. 2" inputmode="numeric" autocomplete="off"></label>
+        </div>
+        <div class="resumen" id="resumen"></div>
+        <a class="btn btn-wa" id="enviar" href="#" target="_blank" rel="noopener" aria-disabled="true"><svg class="i"><use href="#i-wa"/></svg> Pedir cotización por WhatsApp</a>
+        <p class="aclara">Escriba la zona para activar el botón.</p>
+      </form>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="cont">
+      <div class="cta">
+        <div><h2>Hablemos.</h2><p>Cotización personalizada según las necesidades de cada inmueble.</p></div>
+        <div class="contacto">
+          <b>Jacobo Jasqui</b>
+          <a href="https://wa.me/525568084856?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20de%20seguridad" target="_blank" rel="noopener"><svg class="i"><use href="#i-tel"/></svg> 55 6808 4856</a>
+          <a href="mailto:hollister.jss@gmail.com"><svg class="i"><use href="#i-mail"/></svg> hollister.jss@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="cont pie">
+    <span class="logo"><img src="logo.png" alt=""><span>HOLLISTER</span></span>
+    <span>Hollister In Secupro S.A. de C.V. · Seguridad privada intramuros</span>
+    <span>Demo por <a href="https://overcloud.us" target="_blank" rel="noopener">Overcloud</a></span>
+  </div>
+</footer>
+
+<a class="btn btn-wa flota" href="https://wa.me/525568084856?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20seguridad" target="_blank" rel="noopener" aria-label="Escribir a Hollister por WhatsApp"><svg class="i"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+
+<script>
+  const WA = '525568084856';
+  const $ = (id) => document.getElementById(id);
+  const sel = { inmueble: 'Residencial', servicio: 'Seguridad intramuros', turno: '24 horas' };
+  function pintar() {
+    Object.keys(sel).forEach((g) => document.querySelectorAll(`#${g} button`).forEach((b) => b.setAttribute('aria-pressed', b.dataset.v === sel[g])));
+    const z = $('zona').value.trim(), e = $('elementos').value.trim();
+    $('resumen').innerHTML = `<b>${sel.inmueble}</b> · ${sel.servicio} · ${sel.turno}${z ? ` · ${z}` : ''}${e ? ` · ${e} ${e === '1' ? 'elemento' : 'elementos'}` : ''}`;
+    $('enviar').href = `https://wa.me/${WA}?text=${encodeURIComponent(`Hola, quiero una cotización de seguridad:\n• Inmueble: ${sel.inmueble}\n• Servicio: ${sel.servicio}\n• Horario: ${sel.turno}\n• Zona: ${z || '-'}\n• Elementos: ${e || 'por definir'}\n¿Me pueden enviar la propuesta?`)}`;
+    $('enviar').setAttribute('aria-disabled', z ? 'false' : 'true');
+  }
+  ['inmueble','servicio','turno'].forEach((g) => $(g).addEventListener('click', (ev) => { const b = ev.target.closest('button'); if (b) { sel[g] = b.dataset.v; pintar(); } }));
+  document.querySelectorAll('.s a[data-sv]').forEach((a) => a.addEventListener('click', () => { sel.servicio = a.dataset.sv; pintar(); }));
+  ['zona','elementos'].forEach((id) => $(id).addEventListener('input', pintar));
+  pintar();
+</script>
+</body>
+</html>
